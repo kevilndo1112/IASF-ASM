@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+  <h1>Add user</h1>
+  <div class="container">
+    <form th:action="${'/admin/new-user'}" th:object="${the_user}" method="post">
+        <div class="row">
+          <div class="form-group col-md-12">
+            <label for="inputEmail4">name</label>
+            <input type="text" class="form-control" id="inputEmail4" th:field="*{name}" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAddress">age</label>
+            <input type="number" class="form-control" id="inputAddress" th:field="*{age}" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputAddress2">salary</label>
+            <input type="number" class="form-control" id="inputAddress2" th:field="*{salary}" required>
+          </div>
+
+        </div>
+      <button type="submit" class="btn btn-outline-success
+">Add</button>
+    </form>
+  </div>
+</div>
+</body>
+</html>
